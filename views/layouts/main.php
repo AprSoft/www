@@ -38,6 +38,14 @@ AppAsset::register($this);
         'items' => [
             ['label' => '首页', 'url' => ['/site/index']],
             ['label' => '文章', 'url' => ['/article/index']],
+            ['label' => '文档', 'url' => ['/doc/golang-specification'],
+            'items'=>[
+                    [
+                        'label'=>'Go编程语言规范',
+                        'url'=>'/doc/golang-specification'
+                    ],
+                ],
+            ],
         ],
     ]);
     NavBar::end();
