@@ -5,6 +5,7 @@ $rules = require(__DIR__ . '/rules.php');
 $config = [
     'id' => 'blog',
     'basePath' => dirname(__DIR__),
+    'language'=>'zh-CN',
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
