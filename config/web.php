@@ -2,6 +2,7 @@
 
 $params = require(__DIR__ . '/params.php');
 $rules = require(__DIR__ . '/rules.php');
+$modules = require(__DIR__ . '/modules.php');
 $config = [
     'id' => 'blog',
     'basePath' => dirname(__DIR__),
@@ -44,7 +45,9 @@ $config = [
             'showScriptName' => false,
             'rules' => $rules,
         ],
+
     ],
+    'modules' => $modules,
     'params' => $params,
 ];
 
@@ -59,6 +62,7 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'allowedIPs' => ['192.168.10.1', '127.0.0.1']
     ];
 }
 
